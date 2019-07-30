@@ -10,9 +10,8 @@ import {TestData,SectionTemplate} from '../test-model';
   styleUrls: ['cdk-drag-drop-sorting-example.css'],
 })
 export class CdkDragDropSortingExample {
-  movies = [new TestData({parent:new SectionTemplate({name : 'TestName'})}),
-  new TestData({parent:new SectionTemplate({name : 'LocalTEst'})})];
-
+  
+movies = ['a','b','c']
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }

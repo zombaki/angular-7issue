@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
 
 import {CdkDragDropSortingExample} from './app/cdk-drag-drop-sorting-example';
+import {ChildComponenetComponent} from './app/child-componenet/child-componenet.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import {CdkDragDropSortingExample} from './app/cdk-drag-drop-sorting-example';
     ReactiveFormsModule,
   ],
   entryComponents: [CdkDragDropSortingExample],
-  declarations: [CdkDragDropSortingExample],
+  declarations: [CdkDragDropSortingExample,ChildComponenetComponent],
   bootstrap: [CdkDragDropSortingExample],
   providers: []
 })
