@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-
+import {TestData,SectionTemplate} from '../test-model';
 /**
  * @title Drag&Drop sorting
  */
@@ -10,16 +10,8 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
   styleUrls: ['cdk-drag-drop-sorting-example.css'],
 })
 export class CdkDragDropSortingExample {
-  movies = [
-    'Episode I - The Phantom Menace',
-    'Episode II - Attack of the Clones',
-    'Episode III - Revenge of the Sith',
-    'Episode IV - A New Hope',
-    'Episode V - The Empire Strikes Back',
-    'Episode VI - Return of the Jedi',
-    'Episode VII - The Force Awakens',
-    'Episode VIII - The Last Jedi'
-  ];
+  movies = [new TestData({parent:new SectionTemplate({name : 'TestName'})}),
+  new TestData({parent:new SectionTemplate({name : 'LocalTEst'})})];
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
